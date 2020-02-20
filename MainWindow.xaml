@@ -1,0 +1,70 @@
+﻿<Window x:Class="aideInventaire.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:aideInventaire"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550"  Width="900" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="4*" />
+        </Grid.RowDefinitions>
+        <Label Content="Gestion Du Parc Informatique" Grid.Row="0"
+               FontSize="24" Margin="289,28,267,28"/>
+        <!---->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" >
+                <Button  x:Name="btnMaterial" Click="btnMaterial_Click" Background="White" BorderBrush="{x:Null}">
+                    <StackPanel>
+                        <Image Source="/img/material.png" Margin="35,10,35,10"/>
+                        <Label Content="material" Margin="74,0,73,0" FontSize="16"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Button  x:Name="btnLocation"  Background="White" BorderBrush="{x:Null}" Click="btnLocation_Click">
+                    <StackPanel>
+                        <Image Source="/img/map.png" Margin="35,10,35,10"/>
+                        <Label Content="Location" Margin="74,0,73,0" FontSize="16" Width="88"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Column="2">
+                <Button  x:Name="btnTransfert"  Background="White" BorderBrush="{x:Null}">
+                    <StackPanel>
+                        <Image Source="/img/transfer.png" Margin="35,10,35,10"/>
+                        <Label Content="Transfert" Margin="74,0,73,0" FontSize="16"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Column="3">
+                <Button  x:Name="btnRepai"  Background="White" BorderBrush="{x:Null}">
+                    <StackPanel>
+                        <Image Source="/img/sent.png" Margin="35,10,35,10"/>
+                        <Label Content="Repair" Margin="74,0,73,0" FontSize="16"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <!---->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+        </Grid>
+    </Grid>
+</Window>

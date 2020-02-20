@@ -1,0 +1,48 @@
+﻿<Window x:Class="aideInventaire.materiel.AjouterMateriel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:aideInventaire.materiel"
+        mc:Ignorable="d"
+        Title="AjouterMateriel" Loaded="Window_Loaded" Height="550" Width="900" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1">
+            <!--nom materiel-->
+            <Label Content="Nom Materiel" FontSize="16" Margin="0,20,0,0"/>
+            <TextBox Height="35" Name="txtNomMat" FontSize="16" Padding="0,2,0,2"/>
+            <!--num série-->
+            <Label Content="Num Série" FontSize="16" Margin="0,20,0,0"/>
+            <TextBox Height="35" Name="txtNumSerie" FontSize="16" Padding="0,2,0,2"/>
+            <!-- liste des catégories-->
+            <Label Content="Catégorie" FontSize="16"/>
+            <ComboBox Name="cbxCategorie" Height="30"></ComboBox>
+            <!--liste des locations-->
+            <Label Content="Location" FontSize="16"/>
+            <ComboBox Name="cbxLocation" Height="30"></ComboBox>
+            <!--valider ou annuler-->
+            <Grid Height="45" Margin="0,40,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Button Grid.Column="0" Name="btnRetour" Click="btnRetour_Click" HorizontalAlignment="Left" Width="62">
+                    <StackPanel>
+                        <Image Height="41" Stretch="Fill" Source="/img/back.png" Width="58" ></Image>
+                    </StackPanel>
+                </Button>
+                <Button Grid.Column="1" Margin="89,0,0,0" Name="btnAjouterMateriel" Click="btnAjouterMateriel_Click">
+                    <StackPanel>
+                        <Image Height="41" Stretch="Fill" Source="/img/check.png" ></Image>
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

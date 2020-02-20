@@ -1,0 +1,56 @@
+﻿<Window x:Class="aideInventaire.location.Location"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:aideInventaire.location"
+        mc:Ignorable="d"
+        Title="Location" Height="550"  Width="900" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid  Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Background="White" Name="btnAjoutLocation" Click="btnAjoutLocation_Click" Grid.Column="0" BorderBrush="{x:Null}">
+                <StackPanel>
+                    <Image Source="/img/plus.png" Height="53"></Image>
+                    <Label Content="Ajouter"/>
+                   
+                </StackPanel>
+            </Button>
+            <Button Background="White" Grid.Column="1" BorderBrush="{x:Null}">
+                <StackPanel>
+                    <Image Source="/img/deleteLocation.png" Height="53"></Image>
+                    <Label Content="Supprimer"/>
+
+                </StackPanel>
+            </Button>
+            <Button Background="White" Grid.Column="2" BorderBrush="{x:Null}">
+                <StackPanel>
+                    <Image Source="/img/deleteLocation.png" Height="53"></Image>
+                    <Label Content="Supprimer"/>
+
+                </StackPanel>
+            </Button>
+            <Button Background="White" Grid.Column="3" BorderBrush="{x:Null}">
+                <StackPanel>
+                    <Image Source="/img/deleteLocation.png" Height="53"></Image>
+                    <Label Content="Supprimer"/>
+
+                </StackPanel>
+            </Button>
+        </Grid>
+        <Grid  Grid.Row="1">
+            <DataGrid x:Name="dgLocation">
+                
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Window>
