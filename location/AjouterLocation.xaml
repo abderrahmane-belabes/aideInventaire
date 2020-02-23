@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="AjouterLocation" Height="550"  Width="900" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" Margin="0 100 0 50">
+            
+            <Label  Content="Nom De Location :" Height="35"/>
+            <TextBox  x:Name="txtNomLocation" Height="35"/>
+            <Button Margin="90 50" Name="btnAjouterLocation" Click="btnAjouterLocation_Click">
+                Valider
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

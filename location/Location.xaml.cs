@@ -47,6 +47,7 @@ namespace aideInventaire.location
         {
             AjouterLocation ajl = new AjouterLocation();
             ajl.ShowDialog();
+            listerLocation();
         }
     }
 }
