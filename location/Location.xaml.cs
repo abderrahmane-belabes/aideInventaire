@@ -31,7 +31,7 @@ namespace aideInventaire.location
         {
             //string query = "select * from Materiel";
             //string query = "select idMat, libMat from Materiel";
-            string query = "select libLoc from Location";
+            string query = "select * from Location";
             SqlCommand cmd = new SqlCommand(query, Connexion.sqlcon);
 
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
@@ -49,5 +49,38 @@ namespace aideInventaire.location
             ajl.ShowDialog();
             listerLocation();
         }
+
+        private void btnSuppLocation_Click(object sender, RoutedEventArgs e)
+        {
+
+            DataRowView row = (DataRowView)dgLocation.SelectedItem;
+            if (row != null)
+            {
+                int idLoc = (int)row["idLoc"];
+                try
+                {
+                    string query = "delete from Location where idLoc =" + idLoc;
+                    Connexion.sqlcon.Open();
+                    SqlCommand cmd = new SqlCommand(query, Connexion.sqlcon);
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        listerLocation();
+                    }
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.Message);
+                }
+                finally
+                {
+                    Connexion.sqlcon.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("selectionnez une ligne à supprimer");
+            }
+        }
     }
+
 }

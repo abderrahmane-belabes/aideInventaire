@@ -25,7 +25,7 @@
                    
                 </StackPanel>
             </Button>
-            <Button Background="White" Grid.Column="1" BorderBrush="{x:Null}">
+            <Button Background="White" Name="btnSuppLocation" Click="btnSuppLocation_Click" Grid.Column="1" BorderBrush="{x:Null}">
                 <StackPanel>
                     <Image Source="/img/deleteLocation.png" Height="53"></Image>
                     <Label Content="Supprimer"/>
